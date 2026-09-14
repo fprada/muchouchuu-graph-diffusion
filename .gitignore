@@ -1,0 +1,16 @@
+*.npy
+*.npz
+*.bin
+*.h5
+*.hdf5
+*.out
+nohup.out
+__pycache__/
+*.pyc
+
+# large analysis products
+trace_batches/
+canonical_64x21/
+
+# generated figures can be selectively force-added if desired
+*.png
