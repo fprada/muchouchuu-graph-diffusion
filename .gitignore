@@ -78,3 +78,12 @@ threshold
 
 # Manual one-off runners
 run_probe_batch_manual.sh
+
+# Legacy backup / scratch variants
+*_backup.py
+*_edge_shifted_backup.py
+*_discrete_backup.py
+*_help.txt
+
+# Manual one-off runner
+run_probe_batch_manual.sh
