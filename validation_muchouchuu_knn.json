@@ -1,0 +1,108 @@
+{
+  "overall_validation_passed": true,
+  "coordinates": {
+    "path": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/muchouchuu_xyz_f32.bin",
+    "dtype": "float32",
+    "shape": [
+      108000000,
+      3
+    ],
+    "bytes": 1296000000,
+    "box_size_mpc_h": 6000.0,
+    "minimum_xyz_mpc_h": [
+      9.000000136438757e-05,
+      2.9999999242136255e-05,
+      3.9999998989515007e-05
+    ],
+    "maximum_xyz_mpc_h": [
+      5999.99951171875,
+      5999.99951171875,
+      5999.99951171875
+    ],
+    "finite_values": 324000000,
+    "expected_values": 324000000,
+    "all_finite": true,
+    "values_below_zero": 0,
+    "values_at_or_above_box_size": 0,
+    "all_coordinates_in_periodic_box": true,
+    "sample_size": 1000000,
+    "sample_mean_xyz_mpc_h": [
+      3002.1639453018583,
+      2998.374017521579,
+      3001.7469070639504
+    ],
+    "sample_std_xyz_mpc_h": [
+      1731.909394915906,
+      1733.2866750460255,
+      1732.8402350827841
+    ]
+  },
+  "graph": {
+    "path": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/muchouchuu_graphs/knn_periodic.npz",
+    "format": "csr",
+    "shape": [
+      108000000,
+      108000000
+    ],
+    "dtype": "float32",
+    "nnz": 1599504336,
+    "undirected_edges_if_symmetric": 799752168,
+    "has_sorted_indices": true,
+    "has_canonical_format": true,
+    "finite_data": true,
+    "diagonal_nonzero_count": 0,
+    "expected_knn_k": 12,
+    "all_degrees_at_least_k": true,
+    "degree_statistics": {
+      "minimum": 12,
+      "maximum": 35,
+      "mean": 14.810225333333333,
+      "standard_deviation": 2.525138306069674,
+      "percentiles": {
+        "p00": 12.0,
+        "p01": 12.0,
+        "p05": 12.0,
+        "p16": 12.0,
+        "p50": 14.0,
+        "p84": 17.0,
+        "p95": 20.0,
+        "p99": 22.0,
+        "p100": 35.0
+      }
+    },
+    "sampled_symmetry": {
+      "sampled_edges": 1000000,
+      "reverse_edge_failures": 0,
+      "reverse_edge_failure_fraction": 0.0,
+      "first_failure_examples": [],
+      "passed": true
+    },
+    "sampled_periodic_edge_lengths": {
+      "sampled_edges": 1000000,
+      "sampled_self_edges": 0,
+      "minimum_mpc_h": 0.00645011953790181,
+      "p01_mpc_h": 0.5530002933255265,
+      "p05_mpc_h": 2.637782107504143,
+      "p16_mpc_h": 6.104523925886304,
+      "median_mpc_h": 11.91892303064035,
+      "p84_mpc_h": 17.412110976786945,
+      "p95_mpc_h": 20.87224119153789,
+      "p99_mpc_h": 24.451472453235986,
+      "maximum_mpc_h": 38.62622515014368,
+      "all_sampled_distances_finite": true,
+      "all_sampled_distances_positive": true
+    },
+    "full_symmetry_check_requested": false,
+    "exact_asymmetry_nnz": null
+  },
+  "metadata_checks": {
+    "coordinate_metadata_n_matches": true,
+    "coordinate_metadata_shape_matches": true,
+    "coordinate_metadata_dtype_matches": true,
+    "graph_metadata_n_matches": true,
+    "graph_metadata_k_matches": true,
+    "graph_metadata_validation_passed": true,
+    "graph_metadata_mean_degree_difference": 0.0,
+    "all_boolean_checks_pass": true
+  }
+}

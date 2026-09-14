@@ -14,3 +14,67 @@ canonical_64x21/
 
 # generated figures can be selectively force-added if desired
 *.png
+
+# ------------------------------------------------------------
+# Generated logs
+# ------------------------------------------------------------
+*.log
+nohup.out
+
+# ------------------------------------------------------------
+# Python cache / temporary files
+# ------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.bak
+*~
+
+# ------------------------------------------------------------
+# Large numerical products
+# ------------------------------------------------------------
+*.npy
+*.npz
+*.bin
+*.h5
+*.hdf5
+
+# ------------------------------------------------------------
+# Generated tabular diagnostics
+# Keep authoritative summary CSVs by force-adding if needed.
+# ------------------------------------------------------------
+spectral_dimension_*.csv
+three_way_heatkernel_*.csv
+
+# ------------------------------------------------------------
+# Scratch / diagnostic text products
+# ------------------------------------------------------------
+*_excerpt.txt
+
+# ------------------------------------------------------------
+# Generated raster figures
+# Keep publication PDFs under Git.
+# ------------------------------------------------------------
+*.png
+
+# ------------------------------------------------------------
+# Large batch/checkpoint directories
+# ------------------------------------------------------------
+trace_batches/
+canonical_64x21/
+per_time_s64/
+
+# ------------------------------------------------------------
+# Shell/editor scratch names
+# ------------------------------------------------------------
+sed
+threshold
+
+# Explicit legacy backups / scratch derivatives
+*_backup.py
+*_edge_shifted_backup.py
+*_discrete_backup.py
+*_help.txt
+
+# Manual one-off runners
+run_probe_batch_manual.sh

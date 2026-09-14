@@ -198,3 +198,14 @@ Density uses independent bootstrap distributions.
   interpolated bootstrap product exists.
 - The z=1.03 graph and downstream analysis use the corrected periodic
   coordinate binary.
+
+## Halo-selection code provenance
+
+- `select_muchouchuu_vpeak_v4.py`
+  - Status: AUTHORITATIVE
+  - Selector used for the current MuchoUchuu manuscript analysis.
+
+- `select_muchouchuu_vpeak.py`
+  - Status: SUPERSEDED
+  - Retained for provenance and comparison.
+  - Not used for the current manuscript analysis.
