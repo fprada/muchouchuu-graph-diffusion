@@ -1,0 +1,116 @@
+project:
+  title: "Euclidean graph diffusion as a probe of large-scale homogeneity in the cosmic web"
+  manuscript_date: "2026-09-14"
+
+transport:
+  z0:
+    status: AUTHORITATIVE
+    A_RMS: 10.4095576
+    R_median: 446.108
+    R_q16: 418.555
+    R_q84: 486.916
+    bootstrap: 10000
+    seed: 12345
+
+  z049:
+    status: AUTHORITATIVE
+    A_RMS: 10.438294184707798
+    R_median: 449.784
+    R_q16: 426.772
+    R_q84: 481.480
+
+  z103:
+    status: AUTHORITATIVE
+    A_RMS: 10.4894608905163
+    R_median: 452.176
+    R_q16: 424.028
+    R_q84: 500.799
+
+  z203:
+    status: AUTHORITATIVE
+    A_RMS: 10.598993479525339
+    R_median: 453.702
+    R_q16: 428.439
+    R_q84: 488.538
+
+density:
+  z0:
+    status: AUTHORITATIVE
+    R_median: 114.575
+    R_q16: 107.717
+    R_q84: 120.397
+    bootstrap: 10000
+
+  z049:
+    status: AUTHORITATIVE
+    R_median: 112.136
+    R_q16: 105.163
+    R_q84: 118.726
+    bootstrap: 10000
+
+  z103:
+    status: AUTHORITATIVE
+    R_median: 114.087
+    R_q16: 106.910
+    R_q84: 125.003
+    bootstrap: 10000
+
+  z203:
+    status: AUTHORITATIVE
+    R_median: 98.98929836
+    R_q025: 89.8972554
+    R_q16: 94.01176002
+    R_q84: 106.07272675
+    R_q975: 112.57224076
+    bootstrap: 10000
+
+redshift_evolution:
+  transport:
+    z049_minus_z0:
+      median: 3.7054139863
+      q16: -21.6413164661
+      q84: 25.9594178819
+      q025: -82.9783393440
+      q975: 61.9877268489
+      P_gt_zero: 0.5673504830
+
+    z103_minus_z0:
+      median: 5.9237435767
+      q16: -16.5182677759
+      q84: 29.1420831731
+      q025: -60.7722969149
+      q975: 80.6614486844
+      P_gt_zero: 0.6174547832
+
+    z203_minus_z0:
+      median: 5.9746776971
+      q16: -20.4107053345
+      q84: 29.3336141650
+      q025: -80.1842616857
+      q975: 68.5188003305
+      P_gt_zero: 0.6030977735
+
+  density:
+    z049_minus_z0:
+      median: -2.3203957075
+      q16: -11.5277681333
+      q84: 7.0599103872
+      q025: -20.5622782692
+      q975: 16.1271107396
+      P_lt_zero: 0.59805778
+
+    z103_minus_z0:
+      median: 0.1961134828
+      q16: -9.5079595634
+      q84: 12.0197545463
+      q025: -17.6965662361
+      q975: 23.7027168802
+      P_lt_zero: 0.49271742
+
+    z203_minus_z0:
+      median: -14.7693586363
+      q16: -22.9240082277
+      q84: -5.6273389390
+      q025: -29.6339621245
+      q975: 3.6292451600
+      P_lt_zero: 0.94351998
