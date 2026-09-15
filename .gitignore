@@ -87,3 +87,39 @@ run_probe_batch_manual.sh
 
 # Manual one-off runner
 run_probe_batch_manual.sh
+
+# Process IDs / scheduler scratch
+*.pid
+
+# Shell scratch files accidentally created
+mv
+number-density|graph-sample|chunk-size|seed|x-dataset|y-dataset|z-dataset|vpeak-dataset
+
+# Historical inline backups
+*.backup
+*.before_delta_panel
+*.before_fix_delta
+
+# ------------------------------------------------------------
+# Generated MuchoUchuu Step-6 analysis products
+# Scientific provenance is recorded in PROJECT_LEDGER.md and
+# RESULTS_REGISTRY.yaml; directories themselves remain on HPC.
+# ------------------------------------------------------------
+muchouchuu_step6_sliding_bootstrap/
+muchouchuu_step6_window*/
+
+# Step-7 calibration output directories
+muchouchuu_step7_length_calibration/
+muchouchuu_step7_length_calibration_extended_3000/
+
+# Other generated analysis-product directories
+muchouchuu_metric_recovery_extended_3000/
+muchouchuu_real_minus_euclidean_control/
+muchouchuu_step10_density_vs_transport/
+
+# Power-spectrum / heat-kernel generated products
+pk_heatkernel_bootstrap/
+pk_heatkernel_robustness/
+
+# Intermediate derived trace table
+muchouchuu_late_time_combined_trace.csv

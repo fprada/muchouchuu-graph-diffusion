@@ -1,0 +1,31 @@
+{
+  "catalogue_file": "/work/ishiyama/MuchoUchuu6G/00030/hlist_0.99944.list.h5",
+  "input_datasets": {
+    "x": "/x",
+    "y": "/y",
+    "z": "/z",
+    "Vpeak": "/Vpeak"
+  },
+  "box_size_mpc_h": 6000.0,
+  "target_number_density_h3_mpc_minus3": 0.0005,
+  "target_selected_population": 108000000,
+  "Vpeak_input_dtype": "float64",
+  "Vpeak_threshold_dtype": "float64",
+  "Vpeak_threshold": 405.359985,
+  "objects_strictly_above_threshold": 107996531,
+  "objects_equal_to_threshold": 10314,
+  "equal_threshold_objects_used": 3469,
+  "xyz_binary_file": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/muchouchuu_xyz_f32.bin",
+  "xyz_binary_dtype": "float32",
+  "xyz_binary_shape": [
+    108000000,
+    3
+  ],
+  "xyz_binary_layout": "C-order interleaved x,y,z",
+  "vpeak_binary_file": null,
+  "vpeak_binary_dtype": null,
+  "written_objects": 108000000,
+  "written_sample_number_density_h3_mpc_minus3": 0.0005,
+  "is_full_density_graph_catalogue": true,
+  "seed": 12345
+}
