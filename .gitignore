@@ -123,3 +123,22 @@ pk_heatkernel_robustness/
 
 # Intermediate derived trace table
 muchouchuu_late_time_combined_trace.csv
+
+# Generated diffusion / control / graph products
+muchouchuu_diffusion_test_s8/
+muchouchuu_euclidean_null_control/
+muchouchuu_euclidean_null_control_window5/
+muchouchuu_extended_trace/
+muchouchuu_extended_trace_t131072/
+muchouchuu_final_diffusion_homogeneity_1pct/
+muchouchuu_final_products_s64_window7/
+muchouchuu_final_summary/
+muchouchuu_fourier_calibration/
+muchouchuu_graph_work/
+muchouchuu_graphs/
+muchouchuu_knn_diffusion_metric_recovery/
+muchouchuu_knn_diffusion_metric_recovery_long/
+muchouchuu_knn_diffusion_metric_recovery_s8/
+muchouchuu_knn_return_trace_t16384_s64/
+muchouchuu_knn_return_trace_t16384_s8/
+muchouchuu_density_transport_ratio_bootstrap_1pct_check/
