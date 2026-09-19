@@ -142,3 +142,52 @@ muchouchuu_knn_diffusion_metric_recovery_s8/
 muchouchuu_knn_return_trace_t16384_s64/
 muchouchuu_knn_return_trace_t16384_s8/
 muchouchuu_density_transport_ratio_bootstrap_1pct_check/
+
+# Historical inline backups
+*.before_rowblocked_mkl
+*.before_ram
+
+# Generated MuchoUchuu products
+muchouchuu_additional_trace_batches/
+muchouchuu_batch_02_rebuilt/
+muchouchuu_density_homogeneity/
+muchouchuu_density_transport_ratio_bootstrap_1pct/
+
+# Authoritative generated density/transport product.
+# Scientific status and path are recorded in PROJECT_LEDGER.md.
+muchouchuu_density_transport_ratio_bootstrap_1pct_final/
+
+# Generated Gaussian/control/robustness trees
+gaussian_camb_z0_seed3001/
+gaussian_pk_control_seed1001/
+graph_crossing_tmax_robustness/
+growth_test/
+k_robustness/
+local_scratch/
+
+# Accidental shell artifact
+grep
+
+# Generated Gaussian comparison figure
+gaussian_controls_ds_physical_comparison.pdf
+
+# Historical / derived MuchoUchuu products
+muchouchuu_bias_vs_pk_table.csv
+muchouchuu_diffusion_pk_proxy.csv
+muchouchuu_ds_heatkernel_prediction_comparison.csv
+muchouchuu_euclidean_persistence_final.README.txt
+muchouchuu_euclidean_persistence_final.pdf
+muchouchuu_euclidean_persistence_paper_v2.pdf
+muchouchuu_euclidean_persistence_s64.pdf
+muchouchuu_euclidean_persistence_s64_window7_latest.pdf
+muchouchuu_final_diffusion_homogeneity_1pct.csv
+muchouchuu_final_diffusion_homogeneity_1pct.json
+muchouchuu_final_results_paragraph.txt
+muchouchuu_final_rms_transport_summary.json
+muchouchuu_final_summary_s64_window7.csv
+muchouchuu_final_summary_s64_window7.txt
+muchouchuu_halo_pk_nmesh256.csv
+muchouchuu_halo_pk_shells_nmesh256.csv
+muchouchuu_heatkernel_pk_proxy.csv
+muchouchuu_interpolated_transport_uncertainty_1pct.json
+muchouchuu_interpolated_transport_uncertainty_rel001.json
