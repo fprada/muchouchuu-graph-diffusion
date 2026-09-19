@@ -191,3 +191,65 @@ muchouchuu_halo_pk_shells_nmesh256.csv
 muchouchuu_heatkernel_pk_proxy.csv
 muchouchuu_interpolated_transport_uncertainty_1pct.json
 muchouchuu_interpolated_transport_uncertainty_rel001.json
+
+# Local batch/scratch products
+batch_work/
+
+# Accidental shell artifacts
+cp
+do
+done
+
+# Generated appendix figures
+appendix_fourier_calibration_muchouchuu.pdf
+appendix_fourier_calibration_muchouchuu_v2.pdf
+appendix_fourier_calibration_muchouchuu_v3.pdf
+
+# Historical/generated Figure 3 products
+figure3_euclidean_transport_extended_context.pdf
+figure3_muchouchuu_centered.pdf
+figure3_muchouchuu_centered_updated_v4.pdf
+figure3_muchouchuu_centered_updated_v5.pdf
+figure3_muchouchuu_strictcentered_corrected.pdf
+figure3_muchouchuu_transport_updated.pdf
+
+# Superseded/redshift development figures
+figure_transport_density_redshift_evolution.pdf
+figure_transport_density_redshift_evolution_pub.pdf
+figure_z0_vs_z203_ds_physical_scale.pdf
+figure_z0_vs_z203_ds_physical_scale_clean.pdf
+figure_z0_vs_z203_ds_physical_scale_with_delta.pdf
+figure_z0_z049_z103_z203_ds_physical_scale_pub.pdf
+figure_z0_z103_z203_ds_physical_scale_pub.pdf
+figure_z0_z103_z203_ds_physical_scale_pub_v2.pdf
+figure_z0_z103_z203_ds_physical_scale_pub_v3.pdf
+figure_z0_z103_z203_ds_physical_scale_with_delta.pdf
+
+# Derived reconstruction metadata
+density_bootstrap_reconstruction_info.txt
+
+# Accidental shell argument / heredoc artifacts
+--backend
+--checkpoint-every
+--io-chunk-rows
+--output-dir
+--progress-every
+--save-per-probe
+--seed
+--sketch-dim
+--state-dir
+--times
+-E
+0
+PY
+T_FIT_MIN|T_FIT_MAX|sigma_ds|sigma_fit|w =|C =|C_sigma|chi2
+
+# Editor / provenance backups
+*.swp
+CODE_MANIFEST.tsv.before_appendixF
+MANUSCRIPT_MAP.md.before_appendixF
+
+# Superseded experimental Appendix A1 products
+appendix_figureA1_muchouchuu_diffusion_length.pdf
+appendix_figureA1_muchouchuu_diffusion_length_diagnostics.csv
+appendix_figureA1_muchouchuu_diffusion_length_diagnostics_derived.csv
