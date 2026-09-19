@@ -259,3 +259,55 @@ Density uses independent bootstrap distributions.
   This containment-scale diagnostic does not replace or modify the
   AUTHORITATIVE Fourier RMS calibration
   `A_RMS = 10.4095576 h^-1 Mpc step^-1/2`.
+
+## z=2.03 canonical probe merge
+
+- `merge_z203_64probes.py`
+  - Status: AUTHORITATIVE
+  - Input:
+    `growth_test/z203/trace_batches/`
+  - Output:
+    `growth_test/z203/canonical_64x21/`
+  - Merges eight validated 8-probe batches into the canonical
+    64-probe global ordering.
+  - Seeds:
+    `12345, 41001, 41002, 41003, 41004, 41005, 41006, 41007`
+  - Global probe indices:
+    `0--63`
+  - Principal summary:
+    `growth_test/z203/canonical_64x21/z203_return_probability_heat_trace_s64.csv`
+  - The AUTHORITATIVE z=2.03 Step-6 product
+    `growth_test/z203/step6_window7_s64_strictcentered_tmin3584_fixed/`
+    records this canonical summary and the canonical per-probe glob in
+    `crossing_summary.json`.
+  - This establishes the probe ordering used for the paired transport
+    redshift comparison.
+
+## Gaussian-test canonical probe merges
+
+### Ph(k)-matched Gaussian realization
+
+- `merge_grf_64probes.py`
+  - Status: AUTHORITATIVE
+  - Merges eight 8-probe batches into global probe indices `0--63`.
+  - Output:
+    `gaussian_pk_control_seed1001/grf_trace_merged_s64/`
+  - Principal summary:
+    `gaussian_pk_control_seed1001/grf_trace_merged_s64/return_probability_heat_trace_extended_s64.csv`
+  - Downstream Step-6 product:
+    `gaussian_pk_control_seed1001/grf_step6_window7_s64_strictcentered_tmin3584/`
+  - Its `crossing_summary.json` records the merged summary as the input.
+
+### CAMB Gaussian matter realization
+
+- `merge_camb_64probes.py`
+  - Status: AUTHORITATIVE
+  - Merges eight 8-probe batches into global probe indices `0--63`.
+  - Output:
+    `gaussian_camb_z0_seed3001/camb_trace_merged_s64/`
+  - Principal summary:
+    `gaussian_camb_z0_seed3001/camb_trace_merged_s64/return_probability_heat_trace_extended_s64.csv`
+  - Downstream Step-6 product:
+    `gaussian_camb_z0_seed3001/camb_step6_window7_s64_strictcentered_tmin3584/`
+  - Its `crossing_summary.json` records the merged summary as the input.
+
