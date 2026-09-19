@@ -55,3 +55,27 @@
   Full transport-trajectory diagnostic supporting Sect. 4.3
 - Main statistical redshift figure remains:
   `figure_homogeneity_redshift_evolution_bootstrap.pdf`
+
+
+## Appendix A1: real-space diffusion containment scaling
+
+- Status: AUTHORITATIVE
+- Script:
+  `make_appendix_figureA1_muchouchuu_diffusion_length_v3.py`
+- Input:
+  `muchouchuu_step7_length_calibration_extended_3000/muchouchuu_diffusion_length_calibration.csv`
+- Quantity:
+  50% containment scale `ell_f0.500_mpc_h`
+- Fit:
+  `ell_0.5(t) = A_0.5 sqrt(t)`
+- Fitted coefficient:
+  `A_0.5 = 6.449187635001151 h^-1 Mpc step^-1/2`
+- Fractional RMS residual:
+  `3.06%`
+- Output:
+  `appendix_figureA1_muchouchuu_diffusion_length_v3.pdf`
+- Scientific role:
+  Independent real-space diagnostic of diffusive sqrt(t) scaling.
+  It is distinct from the Fourier RMS calibration used to convert
+  diffusion time to the manuscript physical transport scale.
+

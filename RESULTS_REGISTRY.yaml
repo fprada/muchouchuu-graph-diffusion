@@ -136,3 +136,20 @@ redshift_evolution:
       q025: -29.6339621245
       q975: 3.6292451600
       P_lt_zero: 0.94351998
+
+
+appendix_A1_containment_scaling:
+  status: AUTHORITATIVE
+  script: make_appendix_figureA1_muchouchuu_diffusion_length_v3.py
+  input: muchouchuu_step7_length_calibration_extended_3000/muchouchuu_diffusion_length_calibration.csv
+  quantity: ell_f0.500_mpc_h
+  containment_fraction: 0.5
+  fit_min_time: 512.0
+  fit_max_time: 16384.0
+  fitted_A_0p5_mpc_h_per_sqrt_step: 6.449187635001151
+  fit_fractional_rms: 0.03056717051228973
+  fit_max_abs_fractional_residual: 0.05245949843202924
+  number_of_fit_points: 6
+  output_pdf: appendix_figureA1_muchouchuu_diffusion_length_v3.pdf
+  note: "Containment-scale diagnostic; does not replace the Fourier A_RMS calibration."
+

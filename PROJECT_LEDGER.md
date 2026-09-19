@@ -229,3 +229,33 @@ Density uses independent bootstrap distributions.
   - Status: SUPERSEDED
   - Retained for provenance and comparison.
   - Not used for the current manuscript analysis.
+
+## Appendix A1: real-space diffusion containment scaling
+
+- Status: AUTHORITATIVE
+- Script:
+  `make_appendix_figureA1_muchouchuu_diffusion_length_v3.py`
+- Input:
+  `muchouchuu_step7_length_calibration_extended_3000/muchouchuu_diffusion_length_calibration.csv`
+- Measured quantity:
+  `ell_f0.500_mpc_h`
+- Interpretation:
+  50% real-space containment scale; this is not the RMS diffusion length.
+- Fit:
+  `ell_0.5(t) = A_0.5 sqrt(t)`
+- Fitted coefficient:
+  `A_0.5 = 6.449187635001151 h^-1 Mpc step^-1/2`
+- Fit interval:
+  `t = 512--16384`
+- Number of fitted points:
+  `6`
+- Fractional RMS residual:
+  `0.03056717051228973`
+- Maximum absolute fractional residual:
+  `0.05245949843202924`
+- Output:
+  `appendix_figureA1_muchouchuu_diffusion_length_v3.pdf`
+- Important:
+  This containment-scale diagnostic does not replace or modify the
+  AUTHORITATIVE Fourier RMS calibration
+  `A_RMS = 10.4095576 h^-1 Mpc step^-1/2`.

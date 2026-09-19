@@ -1,0 +1,2 @@
+input_csv,time_column,length_column,uncertainty_column,fit_min_time,fit_max_time,containment_fraction,fitted_containment_prefactor_mpc_h_step_minus_half,fit_fractional_rms,fit_max_abs_fractional_residual,number_of_points,number_of_fit_points
+muchouchuu_step7_length_calibration_extended_3000/muchouchuu_diffusion_length_calibration.csv,diffusion_time,ell_f0.500_mpc_h,,512.0,16384.0,0.5,6.449187635001151,0.03056717051228973,0.05245949843202924,6,6
