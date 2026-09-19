@@ -7,3 +7,4 @@ plot_homogeneity_redshift_evolution_bootstrap.py	AUTHORITATIVE	redshift-evolutio
 select_muchouchuu_vpeak.py	SUPERSEDED	earlier MuchoUchuu halo-selection implementation	not used for current manuscript
 select_muchouchuu_vpeak_v4.py	AUTHORITATIVE	MuchoUchuu halo-selection implementation used for current analysis	MuchoUchuu selected tracer catalogue
 plot_z0_z049_z103_z203_ds_physical_pub.py	AUTHORITATIVE	four-redshift spectral-dimension trajectory figure supporting Sect. 4.3 and Appendix F	figure_z0_z049_z103_z203_ds_physical_scale_pub_v2.pdf
+make_figure3_muchouchuu_centered_updated_v4.py	AUTHORITATIVE	fiducial z=0 spectral-dimension Figure 3	figure3_muchouchuu_centered_authoritative.pdf

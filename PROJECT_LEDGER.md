@@ -21,6 +21,26 @@ files/manuscript locations affected.
 - Status: current working draft
 - Manuscript date: 2026-09-14
 
+## Authoritative z=0 Figure 3 product
+
+- Script:
+  `make_figure3_muchouchuu_centered_updated_v4.py`
+- Input directory:
+  `muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/`
+- Output:
+  `figure3_muchouchuu_centered_authoritative.pdf`
+- Calibration:
+  `A_RMS = 10.4095576 h^-1 Mpc step^-1/2`
+- Regenerated fiducial values:
+  - first central persistent time: `2560`
+  - bootstrap median crossing time: `1836.6072440054406`
+  - bootstrap median transport homogeneity scale:
+    `446.10841874518684 h^-1 Mpc`
+  - bootstrap 68% interval:
+    `[418.5554077950529, 486.91625778750154] h^-1 Mpc`
+  - late-time plateau median:
+    `3.009757842732382`
+
 ## Fiducial transport, z=0
 
 - Status: AUTHORITATIVE

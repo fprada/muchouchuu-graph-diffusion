@@ -1,0 +1,135 @@
+{
+  "transport": {
+    "z049": {
+      "z": 0.49,
+      "comparison": "z049-z0",
+      "construction": "paired probe bootstrap; identical bootstrap row corresponds to identical resampled global probe indices",
+      "paired_valid_replicates": 9213,
+      "delta_R_mpc_h": {
+        "n": 9213,
+        "q025": -82.97833934401831,
+        "q16": -21.641316466058715,
+        "median": 3.7054139863191153,
+        "q84": 25.959417881867935,
+        "q975": 61.987726848865314,
+        "probability_gt_0": 0.5673504830131336,
+        "probability_lt_0": 0.4326495169868664
+      },
+      "fractional_delta_R": {
+        "n": 9213,
+        "q025": -0.15065699052866188,
+        "q16": -0.04628396321910664,
+        "median": 0.008613527960161847,
+        "q84": 0.0607863581580606,
+        "q975": 0.13830376110871367,
+        "probability_gt_0": 0.5673504830131336,
+        "probability_lt_0": 0.4326495169868664
+      }
+    },
+    "z103": {
+      "z": 1.03,
+      "comparison": "z103-z0",
+      "construction": "paired probe bootstrap; identical bootstrap row corresponds to identical resampled global probe indices",
+      "paired_valid_replicates": 9178,
+      "delta_R_mpc_h": {
+        "n": 9178,
+        "q025": -60.77229691492869,
+        "q16": -16.518267775906708,
+        "median": 5.9237435766830515,
+        "q84": 29.14208317307199,
+        "q975": 80.6614486843889,
+        "probability_gt_0": 0.6174547831771627,
+        "probability_lt_0": 0.3825452168228372
+      },
+      "fractional_delta_R": {
+        "n": 9178,
+        "q025": -0.11328199033298442,
+        "q16": -0.036184340792593604,
+        "median": 0.013362261590887697,
+        "q84": 0.06642058179497304,
+        "q975": 0.16601778270978776,
+        "probability_gt_0": 0.6174547831771627,
+        "probability_lt_0": 0.3825452168228372
+      }
+    },
+    "z203": {
+      "z": 2.03,
+      "comparison": "z203-z0",
+      "construction": "paired probe bootstrap; identical bootstrap row corresponds to identical resampled global probe indices",
+      "paired_valid_replicates": 9297,
+      "delta_R_mpc_h": {
+        "n": 9297,
+        "q025": -80.18426168574351,
+        "q16": -20.41070533451034,
+        "median": 5.974677697119205,
+        "q84": 29.33361416500602,
+        "q975": 68.51880033047416,
+        "probability_gt_0": 0.6030977734753146,
+        "probability_lt_0": 0.3969022265246854
+      },
+      "fractional_delta_R": {
+        "n": 9297,
+        "q025": -0.1453312974370334,
+        "q16": -0.04383807037146405,
+        "median": 0.013523797033638946,
+        "q84": 0.06783981823053979,
+        "q975": 0.15061277394291947,
+        "probability_gt_0": 0.6030977734753146,
+        "probability_lt_0": 0.3969022265246854
+      }
+    }
+  },
+  "density": {
+    "z049": {
+      "z": 0.49,
+      "comparison": "z049-z0",
+      "construction": "all pairwise combinations of independent density bootstrap crossing radii",
+      "delta_R_mpc_h": {
+        "q025": -20.562278269205727,
+        "q16": -11.52776813333005,
+        "median": -2.320395707492743,
+        "q84": 7.059910387246468,
+        "q975": 16.127110739556407,
+        "n_x": 10000,
+        "n_y": 10000,
+        "number_of_independent_pairs": 100000000,
+        "probability_lt_0": 0.59805778,
+        "probability_gt_0": 0.40194222
+      }
+    },
+    "z103": {
+      "z": 1.03,
+      "comparison": "z103-z0",
+      "construction": "all pairwise combinations of independent density bootstrap crossing radii",
+      "delta_R_mpc_h": {
+        "q025": -17.696566236066566,
+        "q16": -9.507959563436152,
+        "median": 0.19611348278518648,
+        "q84": 12.019754546257637,
+        "q975": 23.702716880190017,
+        "n_x": 10000,
+        "n_y": 10000,
+        "number_of_independent_pairs": 100000000,
+        "probability_lt_0": 0.49271742,
+        "probability_gt_0": 0.50728258
+      }
+    },
+    "z203": {
+      "z": 2.03,
+      "comparison": "z203-z0",
+      "construction": "all pairwise combinations of independent density bootstrap crossing radii",
+      "delta_R_mpc_h": {
+        "q025": -29.63396212446174,
+        "q16": -22.92400822766222,
+        "median": -14.769358636314685,
+        "q84": -5.62733893904737,
+        "q975": 3.6292451599735998,
+        "n_x": 10000,
+        "n_y": 10000,
+        "number_of_independent_pairs": 100000000,
+        "probability_lt_0": 0.94351998,
+        "probability_gt_0": 0.05648002
+      }
+    }
+  }
+}
