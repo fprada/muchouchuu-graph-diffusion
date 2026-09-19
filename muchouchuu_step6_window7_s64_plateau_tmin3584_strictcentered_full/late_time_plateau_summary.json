@@ -1,0 +1,35 @@
+{
+  "late_time_definition": "diffusion_time >= 3584.0",
+  "plateau_tmin": 3584.0,
+  "number_of_late_points": 7,
+  "late_diffusion_times": [
+    3584.0,
+    4096.0,
+    5120.0,
+    6144.0,
+    7168.0,
+    8192.0,
+    10240.0
+  ],
+  "central_plateau_mean": 3.0097639089021713,
+  "central_slope_d_ds_d_log_t": 0.011067323912423899,
+  "bootstrap_plateau_quantiles": {
+    "q025": 2.9698388708127132,
+    "q16": 2.9897509696363587,
+    "median": 3.009757842732382,
+    "q84": 3.0302703182159276,
+    "q975": 3.0488443715558344
+  },
+  "bootstrap_slope_quantiles": {
+    "q025": -0.03045131835670833,
+    "q16": -0.009615586204573406,
+    "median": 0.011621106500622543,
+    "q84": 0.032290913831510976,
+    "q975": 0.05254839234226757
+  },
+  "probability_plateau_ge_3": 0.6847,
+  "probability_plateau_lt_3": 0.3153,
+  "probability_slope_gt_0": 0.711,
+  "probability_slope_lt_0": 0.289,
+  "interpretation_note": "Each bootstrap plateau and slope is computed from one complete resampled probe trajectory, preserving correlations among overlapping sliding windows."
+}

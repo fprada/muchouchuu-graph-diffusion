@@ -1,0 +1,12 @@
+path_or_productstatusrolestorage_note
+muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/AUTHORITATIVEfiducial z=0 transport Step-6 productHPC/generated; selected authoritative summaries tracked in Git
+growth_test/z049/step6_window7_s64_strictcentered_tmin3584_fixed/AUTHORITATIVEz=0.49 transport Step-6 productHPC/generated; selected summary tracked in Git
+growth_test/z103/step6_window7_s64_strictcentered_tmin3584_fixed/AUTHORITATIVEz=1.03 transport Step-6 productHPC/generated; selected summary tracked in Git; corrected periodic-coordinate analysis
+growth_test/z203/step6_window7_s64_strictcentered_tmin3584_fixed/AUTHORITATIVEz=2.03 transport Step-6 productHPC/generated; selected summary tracked in Git; canonical 64-probe ordering
+muchouchuu_density_transport_ratio_bootstrap_1pct_final/AUTHORITATIVEz=0 interpolated density-bootstrap productInterpolated samples and compact summaries tracked; all-pair array retained on HPC
+growth_test/z049/muchouchuu_density_transport_ratio_bootstrap_1pct/AUTHORITATIVEz=0.49 interpolated density-bootstrap productInterpolated samples and compact summaries tracked; all-pair array retained on HPC
+growth_test/z103/muchouchuu_density_transport_ratio_bootstrap_1pct/AUTHORITATIVEz=1.03 interpolated density-bootstrap productInterpolated samples and compact summaries tracked; all-pair array retained on HPC
+growth_test/z203/muchouchuu_density_transport_ratio_bootstrap_1pct_10000/density_crossing_radii_AUTHORITATIVEz=2.03 interpolated density-bootstrap productInterpolated samples tracked; remaining generated products retained on HPC
+growth_test/z203/trace_batches/batch_0AUTHORITATIVEsource probe batches for canonical z=2.03 merge_HPC-generated large intermediate data
+gaussian_pk_control_seed1001/EXPERIMENTALGaussian P(k)-matched control productsHPC/generated control tree
+gaussian_camb_z0_seed3001/EXPERIMENTALCAMB Gaussian-control productsHPC/generated control tree; PkTable.dat is tracked in Git

@@ -1,0 +1,77 @@
+{
+  "simulation": "MuchoUchuu",
+  "density_bootstrap": {
+    "replicates": 10000,
+    "seed": 12345,
+    "sampled_centers": 4096,
+    "dimension_window_points": 5,
+    "scaled_count_tolerance": 0.01,
+    "dimension_tolerance": 0.03,
+    "persistence": 3,
+    "crossing_interpolation": "linear joint margin versus log(radius)",
+    "joint_margin_definition": "min(scaled_count_tolerance - abs(Nbar - 1), dimension_tolerance - abs(D2 - 3))",
+    "success_fraction": 1.0,
+    "interpolated_crossing_quantiles_mpc_h": {
+      "q025": 100.91766424285386,
+      "q16": 106.9103782598586,
+      "median": 114.08658357667483,
+      "q84": 125.00331293922176,
+      "q975": 133.81884726523464
+    },
+    "discrete_crossing_quantiles_mpc_h": {
+      "q025": 102.6937509290598,
+      "q16": 107.21159431141558,
+      "median": 116.85229034325097,
+      "q84": 127.3598983968242,
+      "q975": 138.81237305663333
+    }
+  },
+  "transport_bootstrap": {
+    "input_replicates": 10000,
+    "valid_replicates": 9508,
+    "success_fraction": 0.9508,
+    "A_RMS_mpc_h_per_sqrt_step": 10.4894608905163,
+    "transport_radius_quantiles_mpc_h": {
+      "q025": 399.2097309826787,
+      "q16": 424.02835020935333,
+      "median": 452.17600642214506,
+      "q84": 500.79934126153404,
+      "q975": 591.6618575453329
+    }
+  },
+  "transport_to_density_ratio": {
+    "construction": "all pairwise combinations of independent valid transport and density bootstrap samples",
+    "number_of_ratio_samples": 95080000,
+    "quantiles": {
+      "q025": 3.2245154801072884,
+      "q16": 3.5668819990827587,
+      "median": 3.9727744158703935,
+      "q84": 4.4720450653389765,
+      "q975": 5.296562796938587
+    },
+    "68_percent": {
+      "median": 3.9727744158703935,
+      "minus": 0.40589241678763477,
+      "plus": 0.499270649468583,
+      "interval": [
+        3.5668819990827587,
+        4.4720450653389765
+      ]
+    },
+    "95_percent": {
+      "median": 3.9727744158703935,
+      "minus": 0.7482589357631051,
+      "plus": 1.3237883810681934,
+      "interval": [
+        3.2245154801072884,
+        5.296562796938587
+      ]
+    }
+  },
+  "source_files": {
+    "counts_per_center": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/growth_test/z103/muchouchuu_density_homogeneity/counts_per_center.npy",
+    "radii": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/growth_test/z103/muchouchuu_density_homogeneity/radii_mpc_h.npy",
+    "transport_crossings": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/growth_test/z103/step6_window7_s64_strictcentered_tmin3584_fixed/bootstrap_crossing_times_interpolated.npy",
+    "fourier_calibration": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/growth_test/z103/fourier_calibration/fourier_diffusion_calibration.json"
+  }
+}

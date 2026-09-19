@@ -1,0 +1,28 @@
+{
+  "summary_csv": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/muchouchuu_knn_return_trace_t16384_s64/return_probability_heat_trace.csv",
+  "probe_glob": "muchouchuu_knn_return_trace_t16384_s64/trace_probe_estimates_t*.csv",
+  "bootstrap_mode": "probe_resampling",
+  "number_of_probes": 64,
+  "window_points": 7,
+  "bootstrap_replicates": 10000,
+  "seed": 12345,
+  "target_dimension": 3.0,
+  "tolerance": 0.03,
+  "crossing_time_interpolation": "log_time_linear_margin",
+  "crossing_margin_definition": "tolerance - abs(d_s - 3)",
+  "interpolation_applied_before_bootstrap_quantiles": true,
+  "persistence": 3,
+  "minimum_local_r2": 0.98,
+  "late_time_plateau_tmin": 3584.0,
+  "late_time_plateau_summary": "/work/fprada/DIFFUSION/ANALYSIS/muchouchuu_diffusion/muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/late_time_plateau_summary.json",
+  "first_central_persistent_time": 2560.0,
+  "bootstrap_crossing_success_fraction": 0.9361,
+  "bootstrap_crossing_time_quantiles": {
+    "q16": 1616.7444158916462,
+    "median": 1836.6072440054406,
+    "q84": 2187.98331498162,
+    "q025": 1446.1652950584032,
+    "q975": 3006.4739753158688
+  },
+  "warning": "A low bootstrap crossing success fraction means the available probe count does not constrain a persistent crossing robustly."
+}
