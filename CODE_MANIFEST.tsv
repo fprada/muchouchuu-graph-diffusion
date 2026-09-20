@@ -12,3 +12,5 @@ make_appendix_figureA1_muchouchuu_diffusion_length_v3.py	AUTHORITATIVE	Appendix 
 merge_z203_64probes.py	AUTHORITATIVE	canonical z=2.03 64-probe merge preserving paired probe ordering	growth_test/z203/canonical_64x21/z203_return_probability_heat_trace_s64.csv
 merge_grf_64probes.py	AUTHORITATIVE	canonical 64-probe merge for Ph(k)-matched Gaussian control	gaussian_pk_control_seed1001/grf_trace_merged_s64/return_probability_heat_trace_extended_s64.csv
 merge_camb_64probes.py	AUTHORITATIVE	canonical 64-probe merge for CAMB Gaussian control	gaussian_camb_z0_seed3001/camb_trace_merged_s64/return_probability_heat_trace_extended_s64.csv
+ouchuu_centered_updated_v3.py	AUTHORITATIVE	likely manuscript-era Figure 3 generator	figure3_muchouchuu_centered_updated_v5.pdf
+make_figure3_muchouchuu_centered_updated_v4.py	AUTHORITATIVE	reproducible regeneration of z=0 Figure 3	figure3_muchouchuu_centered_authoritative.pdf

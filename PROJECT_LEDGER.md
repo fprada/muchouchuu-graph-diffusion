@@ -23,14 +23,22 @@ files/manuscript locations affected.
 
 ## Authoritative z=0 Figure 3 product
 
-- Script:
-  `make_figure3_muchouchuu_centered_updated_v4.py`
-- Input directory:
+- Preferred manuscript figure:
+  `figure3_muchouchuu_centered_updated_v5.pdf`
+- Status:
+  AUTHORITATIVE for manuscript use
+- Manuscript-era timestamp:
+  2026-08-25 14:55
+- Best provenance assessment:
+  The figure was produced from the strict-centered Step-6 product
   `muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/`
-- Output:
-  `figure3_muchouchuu_centered_authoritative.pdf`
-- Calibration:
-  `A_RMS = 10.4095576 h^-1 Mpc step^-1/2`
+  and is most likely associated with
+  `make_figure3_muchouchuu_centered_updated_v3.py`
+  or a nearly identical plotting version.
+- Reproducible regeneration script:
+  `make_figure3_muchouchuu_centered_updated_v4.py`
+- Regeneration inputs:
+  `muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/`
 - Regenerated fiducial values:
   - first central persistent time: `2560`
   - bootstrap median crossing time: `1836.6072440054406`
@@ -40,6 +48,11 @@ files/manuscript locations affected.
     `[418.5554077950529, 486.91625778750154] h^-1 Mpc`
   - late-time plateau median:
     `3.009757842732382`
+- Note:
+  The manuscript-era Figure 3 (`..._v5.pdf`) is not pixel-identical to
+  present-day regenerations from v3/v4, likely because of plotting
+  environment differences (e.g. Matplotlib, fonts, rendering settings),
+  not because of changed scientific inputs.
 
 ## Fiducial transport, z=0
 

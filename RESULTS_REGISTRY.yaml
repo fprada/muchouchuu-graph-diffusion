@@ -3,16 +3,16 @@ project:
   manuscript_date: "2026-09-14"
 figure3_z0_authoritative:
   status: AUTHORITATIVE
-  script: make_figure3_muchouchuu_centered_updated_v4.py
+  preferred_manuscript_output: figure3_muchouchuu_centered_updated_v5.pdf
+  manuscript_png: figure3_muchouchuu_centered_updated_v5.png
+  likely_manuscript_script: make_figure3_muchouchuu_centered_updated_v3.py
+  reproducible_regeneration_script: make_figure3_muchouchuu_centered_updated_v4.py
   inputs:
     centered_csv: muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/spectral_dimension_sliding_bootstrap.csv
     crossing_summary_json: muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/crossing_summary.json
     plateau_summary_json: muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/late_time_plateau_summary.json
   calibration:
     A_RMS_mpc_h_per_sqrt_step: 10.4095576
-  outputs:
-    pdf: figure3_muchouchuu_centered_authoritative.pdf
-    png: figure3_muchouchuu_centered_authoritative.png
   summary:
     first_central_persistent_t: 2560.0
     bootstrap_median_t: 1836.6072440054406
@@ -24,6 +24,11 @@ figure3_z0_authoritative:
     late_time_plateau_median: 3.009757842732382
     late_time_plateau_q16: 2.9897509696363587
     late_time_plateau_q84: 3.0302703182159276
+  provenance_note: >
+    Manuscript-era Figure 3 dated 2026-08-25. Present-day regenerations
+    from v3/v4 reproduce the same scientific inputs and crossing values,
+    but are not pixel-identical, likely due to rendering-environment
+    differences.    
 transport:
   z0:
     status: AUTHORITATIVE
