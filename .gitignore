@@ -209,7 +209,6 @@ appendix_fourier_calibration_muchouchuu_v3.pdf
 figure3_euclidean_transport_extended_context.pdf
 figure3_muchouchuu_centered.pdf
 figure3_muchouchuu_centered_updated_v4.pdf
-figure3_muchouchuu_centered_updated_v5.pdf
 figure3_muchouchuu_strictcentered_corrected.pdf
 figure3_muchouchuu_transport_updated.pdf
 
@@ -253,3 +252,6 @@ MANUSCRIPT_MAP.md.before_appendixF
 appendix_figureA1_muchouchuu_diffusion_length.pdf
 appendix_figureA1_muchouchuu_diffusion_length_diagnostics.csv
 appendix_figureA1_muchouchuu_diffusion_length_diagnostics_derived.csv
+
+# Authoritative manuscript Figure 3 artifact
+!figure3_muchouchuu_centered_updated_v5.png

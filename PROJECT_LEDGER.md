@@ -23,23 +23,33 @@ files/manuscript locations affected.
 
 ## Authoritative z=0 Figure 3 product
 
-- Preferred manuscript figure:
+- Status: AUTHORITATIVE
+- Preferred manuscript output:
   `figure3_muchouchuu_centered_updated_v5.pdf`
-- Status:
-  AUTHORITATIVE for manuscript use
-- Manuscript-era timestamp:
-  2026-08-25 14:55
-- Best provenance assessment:
-  The figure was produced from the strict-centered Step-6 product
-  `muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/`
-  and is most likely associated with
-  `make_figure3_muchouchuu_centered_updated_v3.py`
-  or a nearly identical plotting version.
-- Reproducible regeneration script:
+- Preferred manuscript PNG:
+  `figure3_muchouchuu_centered_updated_v5.png`
+- Manuscript artifact timestamp:
+  `2026-08-25 14:55 +0200`
+- Manuscript PDF SHA256:
+  `a5a5ae43ec04b34c616542ef02fc9b11aaaff082c58aba5f0f96815ae0032175`
+- Authoritative reproducible regeneration script:
   `make_figure3_muchouchuu_centered_updated_v4.py`
-- Regeneration inputs:
+- Historical rendering provenance:
+  `make_figure3_muchouchuu_centered_updated_v3.py` was modified at
+  `2026-08-25 14:54:56 +0200`, approximately 9 seconds before the
+  manuscript v5 PDF/PNG were written. This is strong evidence that the
+  v5 rendering was produced with v3 or a nearly identical plotting
+  state, but the exact historical command was not recovered and is
+  therefore not asserted as definitive.
+- Input directory:
   `muchouchuu_step6_window7_s64_plateau_tmin3584_strictcentered_full/`
-- Regenerated fiducial values:
+- Inputs:
+  - `spectral_dimension_sliding_bootstrap.csv`
+  - `crossing_summary.json`
+  - `late_time_plateau_summary.json`
+- Calibration:
+  `A_RMS = 10.4095576 h^-1 Mpc step^-1/2`
+- Scientific values:
   - first central persistent time: `2560`
   - bootstrap median crossing time: `1836.6072440054406`
   - bootstrap median transport homogeneity scale:
@@ -48,11 +58,23 @@ files/manuscript locations affected.
     `[418.5554077950529, 486.91625778750154] h^-1 Mpc`
   - late-time plateau median:
     `3.009757842732382`
-- Note:
-  The manuscript-era Figure 3 (`..._v5.pdf`) is not pixel-identical to
-  present-day regenerations from v3/v4, likely because of plotting
-  environment differences (e.g. Matplotlib, fonts, rendering settings),
-  not because of changed scientific inputs.
+- Provenance note:
+  Present-day regenerations with both
+  `make_figure3_muchouchuu_centered_updated_v3.py` and
+  `make_figure3_muchouchuu_centered_updated_v4.py` reproduce the same
+  scientific values from the unchanged Step-6 inputs but are not
+  pixel-identical to the 2026-08-25 v5 rendering. No change in the
+  scientific result is indicated; the exact cause of the rendering
+  difference is not recovered.
+- Previous manuscript-output registration:
+  `figure3_muchouchuu_centered_authoritative.pdf`
+- Previous PDF SHA256:
+  `e0a9a32539197d124889e10d15c71646f06bb6c9eb3d46518683a918002cc5fc`
+- Reason for change:
+  the manuscript uses the preserved v5 publication rendering; numerical
+  inference and authoritative Step-6 inputs are unchanged.
+- Manuscript affected:
+  Figure 3 only; no numerical manuscript text changes.
 
 ## Fiducial transport, z=0
 
