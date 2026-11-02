@@ -10,6 +10,7 @@ Every product should be marked as one of:
 - AUTHORITATIVE
 - EXPERIMENTAL
 - SUPERSEDED
+- LEGACY
 
 Do not replace an authoritative product silently. When a result
 changes, record the old value, new value, reason for change, and the
@@ -66,6 +67,14 @@ files/manuscript locations affected.
   pixel-identical to the 2026-08-25 v5 rendering. No change in the
   scientific result is indicated; the exact cause of the rendering
   difference is not recovered.
+- Provenance-integrity correction:
+  The CODE_MANIFEST.tsv entry `ouchuu_centered_updated_v3.py`, introduced
+  in Git commit `5ade22f`, was malformed: no corresponding file was found
+  locally or in the inspected Git history. The erroneous row was removed.
+  The full v3 script remains LEGACY, and the full v4 script remains the
+  AUTHORITATIVE reproducible regeneration script, as registered in
+  commit `f054452`. This correction does not recover the exact historical
+  v5 rendering command or change any scientific result.
 - Previous manuscript-output registration:
   `figure3_muchouchuu_centered_authoritative.pdf`
 - Previous PDF SHA256:
@@ -294,6 +303,16 @@ Density uses independent bootstrap distributions.
   This containment-scale diagnostic does not replace or modify the
   AUTHORITATIVE Fourier RMS calibration
   `A_RMS = 10.4095576 h^-1 Mpc step^-1/2`.
+
+## Appendix F: redshift-dependent spectral-dimension trajectories
+
+- Status: AUTHORITATIVE
+- Detailed provenance:
+  MANUSCRIPT_MAP.md -> Appendix F: redshift-dependent spectral-dimension trajectories
+- Script registration:
+  CODE_MANIFEST.tsv -> plot_z0_z049_z103_z203_ds_physical_pub.py
+- Registry entry:
+  RESULTS_REGISTRY.yaml -> appendix_F_trajectories
 
 ## z=2.03 canonical probe merge
 

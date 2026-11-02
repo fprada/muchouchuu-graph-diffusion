@@ -1,3 +1,8 @@
+# Scope: numerical results and references to supporting manuscript artifacts.
+# Intermediate assembly provenance is maintained in PROJECT_LEDGER.md and
+# CODE_MANIFEST.tsv. Canonical probe merges are documented in the ledger
+# sections "z=2.03 canonical probe merge" and
+# "Gaussian-test canonical probe merges".
 project:
   title: "Euclidean graph diffusion as a probe of large-scale homogeneity in the cosmic web"
   manuscript_date: "2026-09-14"
@@ -105,7 +110,25 @@ density:
     R_q975: 112.57224076
     bootstrap: 10000
 
+transport_to_density_ratio:
+  z0:
+    status: AUTHORITATIVE
+    median: 3.913
+    q16: 3.598
+    q84: 4.369
+    source_directory: muchouchuu_density_transport_ratio_bootstrap_1pct_final
+    provenance: "PROJECT_LEDGER.md -> Fiducial density homogeneity, z=0"
+
 redshift_evolution:
+  status: AUTHORITATIVE
+  script: analyze_homogeneity_redshift_evolution.py
+  outputs:
+    json: homogeneity_redshift_evolution_bootstrap_summary.json
+    csv: homogeneity_redshift_evolution_bootstrap_summary.csv
+  figure:
+    script: plot_homogeneity_redshift_evolution_bootstrap.py
+    pdf: figure_homogeneity_redshift_evolution_bootstrap.pdf
+    png: figure_homogeneity_redshift_evolution_bootstrap.png
   transport:
     z049_minus_z0:
       median: 3.7054139863
@@ -172,3 +195,7 @@ appendix_A1_containment_scaling:
   output_pdf: appendix_figureA1_muchouchuu_diffusion_length_v3.pdf
   note: "Containment-scale diagnostic; does not replace the Fourier A_RMS calibration."
 
+appendix_F_trajectories:
+  status: AUTHORITATIVE
+  provenance: "MANUSCRIPT_MAP.md -> Appendix F: redshift-dependent spectral-dimension trajectories"
+  code_registration: "CODE_MANIFEST.tsv -> plot_z0_z049_z103_z203_ds_physical_pub.py"
