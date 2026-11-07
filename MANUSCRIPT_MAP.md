@@ -90,3 +90,69 @@
   It is distinct from the Fourier RMS calibration used to convert
   diffusion time to the manuscript physical transport scale.
 
+## BigUchuu finite-volume control
+
+- Status: AUTHORITATIVE
+- Scientific role:
+  finite-volume diagnostic only; BigUchuu does not define a second
+  fiducial cosmological homogeneity measurement.
+
+### Sect. 2.2 and Sect. 3.5
+
+- BigUchuu box:
+  `L = 4000 h^-1 Mpc`
+- Graph vertices:
+  `N = 32,000,000`
+- Gaussian probes:
+  `64`
+- Graph:
+  periodic symmetrised `k = 12` nearest-neighbour graph.
+- Role:
+  smaller-volume comparison used to test the finite-volume
+  interpretation of the late-time trajectory.
+
+### Appendix B.1: matched-range BigUchuu test
+
+- Status: AUTHORITATIVE
+- Product:
+  `biguchuu_diffusion_reproduction_v2/biguchuu_step6_s64_finite_volume_tmax7168`
+- Step-6 settings:
+  64 probes, seven-point windows, 10000 probe-bootstrap realisations,
+  seed 12345, tolerance 0.03, persistence 3, minimum local R2 = 0.98,
+  plateau tmin = 3584.
+- Crossing-success fraction:
+  `0.5547`, quoted in the manuscript as `0.555`.
+- Crossing-time quantiles:
+  q16 = `2215.8173371082135`,
+  median = `3152.4442966820093`,
+  q84 = `3780.5566250620045`.
+- Manuscript matched-range diagnostic:
+  `R_hom,B = 581.1^{+55.3}_{-93.9} h^-1 Mpc`.
+- Interpretation:
+  this is a matched-range finite-volume diagnostic and is distinct
+  from the full `tmax=32768` BigUchuu transport-control result.
+
+### Sect. 6 and Appendix B.2: late-time finite-volume downturn
+
+- Status: AUTHORITATIVE
+- BigUchuu central Euclidean-band departure:
+  `t = 8192`.
+- Completed Fourier calibration:
+  `R(8192) = 937.8870646045921 h^-1 Mpc`.
+- Manuscript rounded value:
+  `937 h^-1 Mpc`.
+- Scientific role:
+  comparison with the later MuchoUchuu downturn to test the
+  periodic finite-volume interpretation.
+- Important:
+  this downturn scale is not the BigUchuu transport-homogeneity
+  crossing scale.
+
+### Conclusion item 6
+
+- Uses the BigUchuu late-time downturn value
+  `937 h^-1 Mpc`, compared with the MuchoUchuu downturn value
+  `1884 h^-1 Mpc`.
+- No manuscript numerical change is required from the
+  BigUchuu provenance reconstruction.
+

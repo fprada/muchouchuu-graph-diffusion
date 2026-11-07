@@ -247,6 +247,49 @@ biguchuu_finite_volume_transport_control:
     q84: 804.06
     central_persistent_crossing: 643.16
     q975_note: No directly calibrated radius; q975 time exceeds completed calibration endpoint.
+
+  manuscript_matched_range_test:
+    status: AUTHORITATIVE
+    role: finite-volume diagnostic only; not a fiducial homogeneity measurement
+    product_directory: biguchuu_diffusion_reproduction_v2/biguchuu_step6_s64_finite_volume_tmax7168
+    maximum_diffusion_time: 7168
+    number_of_probes: 64
+    bootstrap_replicates: 10000
+    seed: 12345
+    crossing_success_fraction: 0.5547
+    crossing_time:
+      q16: 2215.8173371082135
+      median: 3152.4442966820093
+      q84: 3780.5566250620045
+      q025: 1762.8109991833078
+      q975: 4035.423969682872
+    manuscript_physical_scale_mpc_h:
+      median: 581.1
+      lower_error: 93.9
+      upper_error: 55.3
+    manuscript_locations:
+      - Appendix B.1
+      - Sect. 3.5
+    note: >-
+      The manuscript rounded values are reproduced by the authoritative
+      tmax=7168 finite-volume sequence and the completed BigUchuu Fourier
+      calibration. This matched-range diagnostic is distinct from the
+      full tmax=32768 BigUchuu transport-control result.
+
+  manuscript_finite_volume_downturn:
+    status: AUTHORITATIVE
+    role: late-time finite-volume diagnostic
+    central_departure_time: 8192
+    calibrated_radius_mpc_h: 937.8870646045921
+    manuscript_rounded_radius_mpc_h: 937
+    manuscript_locations:
+      - Sect. 6
+      - Appendix B.2
+      - Conclusion item 6
+    note: >-
+      This is the scale at which the BigUchuu central spectral-dimension
+      curve falls below the lower one-per-cent Euclidean boundary. It is
+      not the BigUchuu transport-homogeneity crossing scale.
   corroborating_product:
     status: EXPERIMENTAL
     directory: biguchuu_step6_window7_t32768_s64_centered_full
