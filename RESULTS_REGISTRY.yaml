@@ -199,3 +199,82 @@ appendix_F_trajectories:
   status: AUTHORITATIVE
   provenance: "MANUSCRIPT_MAP.md -> Appendix F: redshift-dependent spectral-dimension trajectories"
   code_registration: "CODE_MANIFEST.tsv -> plot_z0_z049_z103_z203_ds_physical_pub.py"
+
+biguchuu_finite_volume_transport_control:
+  status: AUTHORITATIVE
+  provenance_basis: user-supplied reproducibility evidence; no calculation rerun
+  result_directory: biguchuu_step6_s64_finite_volume_tmax32768
+  probe_construction:
+    old_input: biguchuu_knn_return_trace_t32768
+    old_global_probe_indices: '0-31 inclusive'
+    extra_input: biguchuu_knn_return_trace_t32768_extra32_seed52001
+    extra_global_probe_indices: '32-63 inclusive'
+  driver:
+    script: run_biguchuu_s64_finite_volume_sequence.py
+    sha256: 78def4b6645aa624776d09348dd4dffbf86dd4df4d6d211468e08b5470ad2aec
+  step6:
+    script: upgrade_step6_sliding_bootstrap_interpolated_plateau.py
+    sha256: 3dc3c6c86b2a7663d1d299b3cb9e5a0529d4880d2172195882dff59814ffef3c
+    parameters:
+      number_of_probes: 64
+      window_points: 7
+      bootstrap_replicates: 10000
+      seed: 12345
+      target_dimension: 3.0
+      tolerance: 0.03
+      persistence: 3
+      minimum_local_r2: 0.98
+      late_time_plateau_tmin: 3584
+    first_central_persistent_time: 3860.3735406999035
+    bootstrap_crossing_success_fraction: 0.8737
+    bootstrap_crossing_time:
+      q16: 2548.1287683604837
+      median: 3706.1364626319655
+      q84: 6026.508082081586
+      q025: 1826.782302537908
+      q975: 9026.55274630243
+  fourier_calibration:
+    status: AUTHORITATIVE
+    product: biguchuu_physical_diffusion_length/physical_diffusion_length.csv
+    sha256: d5922d1915cfcb1c0993cd17997698e2e223a4349245885e840ba3f14c9070dc
+    script: measure_diffusion_length_fourier.py
+    script_sha256: 21185509b2df3d5549964f0c538cc421163acc12e76fe18a01463c4cfd10fec3
+    completed_endpoint_t: 8192
+  directly_calibrated_R_mpc_h:
+    values_approximate: true
+    median: 630.20
+    q16: 522.68
+    q84: 804.06
+    central_persistent_crossing: 643.16
+    q975_note: No directly calibrated radius; q975 time exceeds completed calibration endpoint.
+  corroborating_product:
+    status: EXPERIMENTAL
+    directory: biguchuu_step6_window7_t32768_s64_centered_full
+    role: corroborating evidence; not the authoritative generator
+  historical_workflow:
+    status: LEGACY
+    scripts:
+      - analyze_diffusion_homogeneity_scale.py
+      - bootstrap_diffusion_homogeneity_scale.py
+    probe_input: biguchuu_knn_return_trace_t16384
+    historical_readme_calibration_input: biguchuu_knn_physical_length_all/physical_diffusion_length.csv
+    historical_readme_calibration_product_present: false
+    surviving_completed_calibration: biguchuu_physical_diffusion_length/physical_diffusion_length.csv
+    output_directory_patterns:
+      - biguchuu_knn_diffusion_homogeneity_w{w}
+      - biguchuu_knn_bootstrap_homogeneity_w{w}
+    w4:
+      central_R_mpc_h: 592.7199717345741
+      success_fraction: 0.8653
+    w5:
+      central_R_mpc_h: 619.7159219781792
+      success_fraction: 0.8296
+    w6:
+      central_R_mpc_h: 591.5177423304661
+      success_fraction: 0.8810
+  change_note: >-
+    Historical approximate window-averaged 600 h^-1 Mpc summary replaced
+    by the reproducible 64-probe seven-point control (central 643.16,
+    bootstrap median 630.20 h^-1 Mpc, approximately; distinct estimators).
+    README legacy success fractions corrected from near 95% to preserved values.
+    No MuchoUchuu or redshift result or manuscript artifact changed.

@@ -365,3 +365,26 @@ Density uses independent bootstrap distributions.
     `gaussian_camb_z0_seed3001/camb_step6_window7_s64_strictcentered_tmin3584/`
   - Its `crossing_summary.json` records the merged summary as the input.
 
+## BigUchuu finite-volume transport control
+
+- Status: AUTHORITATIVE, promoted using user-supplied reproducibility evidence.
+- Result directory: `biguchuu_step6_s64_finite_volume_tmax32768`.
+- Probe construction: `biguchuu_knn_return_trace_t32768` supplies global probes 0--31; `biguchuu_knn_return_trace_t32768_extra32_seed52001` supplies global probes 32--63.
+- driver script: `run_biguchuu_s64_finite_volume_sequence.py`; SHA256 `78def4b6645aa624776d09348dd4dffbf86dd4df4d6d211468e08b5470ad2aec`.
+- step6 script: `upgrade_step6_sliding_bootstrap_interpolated_plateau.py`; SHA256 `3dc3c6c86b2a7663d1d299b3cb9e5a0529d4880d2172195882dff59814ffef3c`.
+- Step-6 parameters: number_of_probes = 64; window_points = 7; bootstrap_replicates = 10000; seed = 12345; target_dimension = 3.0; tolerance = 0.03; persistence = 3; minimum_local_r2 = 0.98; late_time_plateau_tmin = 3584.
+- First central persistent time: `3860.3735406999035`; bootstrap crossing success fraction: `0.8737`.
+- Bootstrap crossing times: q16 = 2548.1287683604837; median = 3706.1364626319655; q84 = 6026.508082081586; q025 = 1826.782302537908; q975 = 9026.55274630243.
+- Completed Fourier calibration: `biguchuu_physical_diffusion_length/physical_diffusion_length.csv`; SHA256 `d5922d1915cfcb1c0993cd17997698e2e223a4349245885e840ba3f14c9070dc`.
+- Fourier script: `measure_diffusion_length_fourier.py`; SHA256 `21185509b2df3d5549964f0c538cc421163acc12e76fe18a01463c4cfd10fec3`.
+- Directly calibrated physical scales (approximate, h^-1 Mpc): median 630.20, q16 522.68, q84 804.06, central persistent crossing 643.16.
+- No directly calibrated q975 physical radius: q975 time 9026.55274630243 exceeds the completed Fourier endpoint t = 8192.
+- `biguchuu_step6_window7_t32768_s64_centered_full` remains EXPERIMENTAL corroborating evidence, not the authoritative generator.
+- Historical w=4,5,6 workflow: LEGACY. Central crossings (h^-1 Mpc) and success fractions: w4 592.7199717345741 / 0.8653; w5 619.7159219781792 / 0.8296; w6 591.5177423304661 / 0.8810.
+- Historical README command paths used `biguchuu_knn_bootstrap_homogeneity_all_w{w}`, but those directories are absent.
+- Surviving LEGACY bootstrap products are `biguchuu_knn_bootstrap_homogeneity_w4`, `biguchuu_knn_bootstrap_homogeneity_w5`, and `biguchuu_knn_bootstrap_homogeneity_w6`.
+- The historical README calibration path `biguchuu_knn_physical_length_all/physical_diffusion_length.csv` is absent because that calibration run is incomplete.
+- The surviving completed calibration is `biguchuu_physical_diffusion_length/physical_diffusion_length.csv`.
+- Change: historical approximate window-averaged 600 h^-1 Mpc summary replaced by the reproducible 64-probe seven-point control: central crossing approximately 643.16 and bootstrap median approximately 630.20 h^-1 Mpc (distinct estimators). Correct the former README claim of crossing fractions near 95% to the preserved legacy fractions above. No calculation was rerun.
+- Documentation affected: PROJECT_LEDGER.md, RESULTS_REGISTRY.yaml, CODE_MANIFEST.tsv, README_REPRODUCE_ALL.md. No manuscript section, figure or table changed; MANUSCRIPT_MAP.md does not explicitly register BigUchuu as a control. MuchoUchuu and redshift numerical results are unchanged.
+

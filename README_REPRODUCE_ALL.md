@@ -1,7 +1,7 @@
 # BigUchuu graph-diffusion analysis: complete reproduction workflow
 
-This bundle reproduces the full analysis from halo selection through the
-bootstrap diffusion homogeneity scale. Commands assume:
+The authoritative control is documented below. Sections 0--12 preserve the
+LEGACY 32-probe w=4,5,6 workflow. Those historical commands assume:
 
 - box side: `L=4000 h^-1 Mpc`
 - selected halos: `N=32,000,000`
@@ -12,6 +12,30 @@ bootstrap diffusion homogeneity scale. Commands assume:
 - random seed: `12345`
 
 Run from `/work/fprada/DIFFUSION` after copying all scripts there.
+
+## BigUchuu finite-volume transport control
+
+- Status: AUTHORITATIVE, promoted using user-supplied reproducibility evidence.
+- Result directory: `biguchuu_step6_s64_finite_volume_tmax32768`.
+- Probe construction: `biguchuu_knn_return_trace_t32768` supplies global probes 0--31; `biguchuu_knn_return_trace_t32768_extra32_seed52001` supplies global probes 32--63.
+- driver script: `run_biguchuu_s64_finite_volume_sequence.py`; SHA256 `78def4b6645aa624776d09348dd4dffbf86dd4df4d6d211468e08b5470ad2aec`.
+- step6 script: `upgrade_step6_sliding_bootstrap_interpolated_plateau.py`; SHA256 `3dc3c6c86b2a7663d1d299b3cb9e5a0529d4880d2172195882dff59814ffef3c`.
+- Step-6 parameters: number_of_probes = 64; window_points = 7; bootstrap_replicates = 10000; seed = 12345; target_dimension = 3.0; tolerance = 0.03; persistence = 3; minimum_local_r2 = 0.98; late_time_plateau_tmin = 3584.
+- First central persistent time: `3860.3735406999035`; bootstrap crossing success fraction: `0.8737`.
+- Bootstrap crossing times: q16 = 2548.1287683604837; median = 3706.1364626319655; q84 = 6026.508082081586; q025 = 1826.782302537908; q975 = 9026.55274630243.
+- Completed Fourier calibration: `biguchuu_physical_diffusion_length/physical_diffusion_length.csv`; SHA256 `d5922d1915cfcb1c0993cd17997698e2e223a4349245885e840ba3f14c9070dc`.
+- Fourier script: `measure_diffusion_length_fourier.py`; SHA256 `21185509b2df3d5549964f0c538cc421163acc12e76fe18a01463c4cfd10fec3`.
+- Directly calibrated physical scales (approximate, h^-1 Mpc): median 630.20, q16 522.68, q84 804.06, central persistent crossing 643.16.
+- No directly calibrated q975 physical radius: q975 time 9026.55274630243 exceeds the completed Fourier endpoint t = 8192.
+- `biguchuu_step6_window7_t32768_s64_centered_full` remains EXPERIMENTAL corroborating evidence, not the authoritative generator.
+- Historical w=4,5,6 workflow: LEGACY. Central crossings (h^-1 Mpc) and success fractions: w4 592.7199717345741 / 0.8653; w5 619.7159219781792 / 0.8296; w6 591.5177423304661 / 0.8810.
+- Historical scripts, inputs and output directories remain preserved in README_REPRODUCE_ALL.md sections 10--11 and RESULTS_REGISTRY.yaml.
+- Change: historical approximate window-averaged 600 h^-1 Mpc summary replaced by the reproducible 64-probe seven-point control: central crossing approximately 643.16 and bootstrap median approximately 630.20 h^-1 Mpc (distinct estimators). Correct the former README claim of crossing fractions near 95% to the preserved legacy fractions above. No calculation was rerun.
+- Documentation affected: PROJECT_LEDGER.md, RESULTS_REGISTRY.yaml, CODE_MANIFEST.tsv, README_REPRODUCE_ALL.md. No manuscript section, figure or table changed; MANUSCRIPT_MAP.md does not explicitly register BigUchuu as a control. MuchoUchuu and redshift numerical results are unchanged.
+
+
+The supplied driver identifies the reproducible 64-probe workflow. Do not
+substitute the historical commands below for the authoritative generator.
 
 ## 0. Environment
 
@@ -270,9 +294,23 @@ done
 ```
 
 This per-probe crossing distribution is diagnostic only. Because individual
-probes can fail to cross, use the ensemble bootstrap below for final errors.
+probes can fail to cross, the legacy ensemble bootstrap below supplies historical errors.
 
 ## 11. Ensemble bootstrap homogeneity scale
+
+> **Legacy-path note.** The historical commands below wrote to
+> `biguchuu_knn_bootstrap_homogeneity_all_w${W}`, but those directories
+> are not present in the surviving analysis tree. The preserved LEGACY
+> products are `biguchuu_knn_bootstrap_homogeneity_w4`,
+> `biguchuu_knn_bootstrap_homogeneity_w5`, and
+> `biguchuu_knn_bootstrap_homogeneity_w6`.
+>
+> The historical command also references
+> `biguchuu_knn_physical_length_all/physical_diffusion_length.csv`.
+> That later calibration run is incomplete and that CSV is absent.
+> The surviving completed Fourier calibration is
+> `biguchuu_physical_diffusion_length/physical_diffusion_length.csv`.
+
 
 ```bash
 for W in 4 5 6; do
@@ -292,13 +330,15 @@ done
 Previously obtained central crossings were approximately:
 
 ```text
-w=4: 592.72 h^-1 Mpc
-w=5: 619.72 h^-1 Mpc
-w=6: 591.52 h^-1 Mpc
+w=4: 592.7199717345741 h^-1 Mpc; success = 0.8653
+w=5: 619.7159219781792 h^-1 Mpc; success = 0.8296
+w=6: 591.5177423304661 h^-1 Mpc; success = 0.8810
 ```
 
-with crossing fractions near 95%. The central window-averaged result was
-approximately `600 h^-1 Mpc`.
+The preserved crossing fractions are 86.53%, 82.96%, and 88.10%. The
+approximate window-averaged `600 h^-1 Mpc` summary is LEGACY. The
+authoritative central crossing is approximately `643.16 h^-1 Mpc` and
+bootstrap median approximately `630.20 h^-1 Mpc`.
 
 ## 12. Essential consistency checks
 
@@ -344,4 +384,5 @@ PY
 - The late decline of `d_s` is finite-volume mixing. Interpret conservatively
   for `ell < L/4 = 1000 h^-1 Mpc`.
 - The quoted 1% band is an adopted operational definition:
-  `|d_s-3| <= 0.03`, persistent for two adjacent sliding windows.
+  `|d_s-3| <= 0.03`, persistent for three adjacent windows in the authoritative seven-point
+  analysis (two in the historical LEGACY workflow).
